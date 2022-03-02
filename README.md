@@ -4,4 +4,5 @@
 
 | **Challange#**   |**link**  |
 |------------------|:-------------------:|
-| Challenge1       | [Link.Challeneg1](./Challenge_1/Challenge_README.md)|
+| Challenge1       | [Array-reverse](./Challenge_1/Challenge1_README.md)|
+| Challenge2       | [Array-insert-shift](./Challenge_2/Challenge2_README.md)|
