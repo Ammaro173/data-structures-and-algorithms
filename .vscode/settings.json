@@ -1,0 +1,6 @@
+{
+	"prettier.printWidth": 140,
+	"prettier.tabWidth": 4,
+	"python.formatting.provider": "black",
+	"prettier.useTabs": true
+}

@@ -1,5 +1,3 @@
-
-
 class Node:
     """
     creat Node for LL  (data and next node pointer)
@@ -7,7 +5,7 @@ class Node:
 
     def __init__(self, data=None, nextNode=None):
         self.data = data
-        self.nextNode = nextNode
+        self.nextNodes = nextNode
 
 
 class LinkedList:
@@ -15,8 +13,8 @@ class LinkedList:
     create LL using Nodes which has a head
     """
 
-    def __init__(self, head=None):
-        self.head = head
+    def __init__(self):
+        self.head = None  # or self.head=head and have head as None default value!!
 
     def __str__(self):
         return self.stringfy()
@@ -26,12 +24,16 @@ class LinkedList:
             print("Linked list is empty")
             return
         iter = self.head
+
+        # print("me", iter.__dict__)
         # llstr : link list stringfy
         llstr = ""
         while iter:
-            llstr += "{"+str(iter.data)+"}" + \
-                '-->' if iter.nextNode else "{" + \
-                str(iter.data)+"}" + '-->Null'
+            llstr += (
+                "{" + str(iter.data) + "}" + "-->"
+                if iter.nextNode
+                else "{" + str(iter.data) + "}" + "-->Null"
+            )
             iter = iter.nextNode
         print('"' + llstr + '"')
 
@@ -61,9 +63,10 @@ class LinkedList:
             return
 
         iter = self.head
-
+        print("menene", iter.__dict__)
         while iter.nextNode:
             iter = iter.nextNode
+            # print("meei", iter.nextNode)
 
         iter.nextNode = Node(value, None)
 
@@ -80,7 +83,7 @@ class LinkedList:
                 headVal = headVal.nextNode
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     ll = LinkedList()
     ll.insert_at_the_beg(1)
     ll.insert_at_the_beg(33)

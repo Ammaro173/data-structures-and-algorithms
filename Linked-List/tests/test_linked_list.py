@@ -39,8 +39,11 @@ def test_multi_value_insert():
     multiInputList.insert("THR33")
     multiInputList.insert("TOO")
     multiInputList.insert("WON")
-    actual = [multiInputList.head.data, multiInputList.head.nextNode.data,
-              multiInputList.head.nextNode.nextNode.data]
+    actual = [
+        multiInputList.head.data,
+        multiInputList.head.nextNode.data,
+        multiInputList.head.nextNode.nextNode.data,
+    ]
     expected = ["WON", "TOO", "THR33"]
     assert actual == expected
 
@@ -72,8 +75,11 @@ def test_complete_list_return_as_string():
     returnedList.insert("THR33")
     returnedList.insert("TOO")
     returnedList.insert("WON")
-    actual = [returnedList.head.data, returnedList.head.nextNode.data,
-              returnedList.head.nextNode.nextNode.data]
+    actual = [
+        returnedList.head.data,
+        returnedList.head.nextNode.data,
+        returnedList.head.nextNode.nextNode.data,
+    ]
     expected = ["WON", "TOO", "THR33"]
     assert actual == expected
 
@@ -85,9 +91,20 @@ def test_stringfy():
     returnedList.insert("TOO")
     returnedList.insert("WON")
     returnedList.stringfy()
-    actual = "{"+str(returnedList.head.data)+"}"+'-->'+"{"+str(returnedList.head.nextNode.data) + \
-        "}"+'-->' + "{" + \
-            str(returnedList.head.nextNode.nextNode.data)+"}" + '-->NULL'
+    actual = (
+        "{"
+        + str(returnedList.head.data)
+        + "}"
+        + "-->"
+        + "{"
+        + str(returnedList.head.nextNode.data)
+        + "}"
+        + "-->"
+        + "{"
+        + str(returnedList.head.nextNode.nextNode.data)
+        + "}"
+        + "-->NULL"
+    )
     expected = "{WON}-->{TOO}-->{THR33}-->NULL"
     assert actual == expected
 
