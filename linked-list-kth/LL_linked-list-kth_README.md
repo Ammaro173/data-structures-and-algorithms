@@ -1,4 +1,4 @@
-# linked-list-insertions
+# linked-list-kth
 
 > [Back to Home](../README.md)
 
