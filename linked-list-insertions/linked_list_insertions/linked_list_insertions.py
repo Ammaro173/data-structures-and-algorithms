@@ -1,7 +1,3 @@
-from re import A
-from turtle import Turtle
-
-
 class Node:
     """
     creat Node for LL  (data and next node pointer)
