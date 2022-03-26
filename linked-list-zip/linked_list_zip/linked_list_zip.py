@@ -7,6 +7,9 @@ class Node:
         self.data = data
         self.nextNode = nextNode
 
+    def __repr__(self):
+        return self.data
+
 
 class LinkedList:
     """
@@ -18,6 +21,15 @@ class LinkedList:
 
     def __str__(self):
         return str(self.stringfy())
+
+    def __repr__(self):
+        node = self.head
+        nodes = []
+        while node is not None:
+            nodes.append(node.data)
+            node = node.nextNode
+        nodes.append("None")
+        return " -> ".join(nodes)
 
     def stringfy(self):
         """
