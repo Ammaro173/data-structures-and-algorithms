@@ -17,6 +17,7 @@ class Stack:
 
     def __init__(self, node=None):
         self.top = node
+        self.size = 0
 
     def push(self, value):
         """
@@ -25,6 +26,7 @@ class Stack:
         node = Node(value)  ##
         node.next = self.top
         self.top = node
+        self.size += 1
 
     def pop(self):
         """
@@ -33,6 +35,7 @@ class Stack:
             raise InvalidOperationError("Method not allowed on empty collection")
         node = self.top
         self.top = self.top.next
+        self.size -= 1
         return node.value
 
     def peek(self):
@@ -50,6 +53,10 @@ class Stack:
             return True
         else:
             return False
+
+    def size(self):
+        """returns the size of the stack"""
+        return self.size
 
 
 class Queue:

@@ -12,3 +12,4 @@
 | linked-list-kth      |    [linked-list-kth](./linked-list-kth/LL_linked-list-kth_README.md)    |
 | linked-list-zip      |             [linked-list-zip](./linked-list-zip/ll_zip.md)              |
 | stacks-and-queues    |      [stacks-and-queues](./stacks-and-queues/README_Stack_Ques.md)      |
+| stack-queue-pseudo   | [stack-queue-pseudo](./stack-queue-pseudo/stack-queue-pseudo_README.md) |
