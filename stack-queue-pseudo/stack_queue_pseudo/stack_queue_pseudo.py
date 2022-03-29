@@ -1,4 +1,4 @@
-from stack_queue_pseudo.stacks_and_queues import Stack, Node, InvalidOperationError
+from .stacks_and_queues import InvalidOperationError, Node, Stack
 
 
 class Pseudo_queue:
@@ -11,16 +11,49 @@ class Pseudo_queue:
         self.size = 0
 
     def enqueue(self, value):
+
         self.go_out_from.push(value)
+
         # self.go_in.push(self.go_out_from.pop())
         self.size += 1
 
     def dequeue(self):
 
         """Fifo"""
-        while self.size > 0:
-            self.go_in.push(self.go_out_from.pop())
-            self.size -= 1
+        y = self.size
+        # while self.size > 0:
+        #     self.go_in.pop()
+        #     self.size -= 1
+        # while y > 0:
+        #     self.go_in.pop()
+        #     y -= 1
+
+        # while y > 0:
+
+        #     if not self.go_out_from.is_empty():
+        #         self.go_in.push(self.go_out_from.top.value)
+
+        #         # self.go_out_from.push(self.go_out_from.pop())
+        #         # self.go_out_from.top = self.go_out_from.top.next
+
+        #         print("ive benn here")
+
+        #     else:
+
+        #         print("i was here")
+        #         pass
+
+        #     y -= 1
+
+        # else:
+        #     print("i was here")
+
+        if self.go_in.is_empty():
+            while not self.go_out_from.is_empty():
+                self.go_in.push(self.go_out_from.pop())
+        # else:
+        #     print("list is empty")
+
         return self.go_in.pop()
 
     ####### Failed Trials #######
@@ -79,7 +112,7 @@ class Pseudo_queue:
 if __name__ == "__main__":
     ins = Pseudo_queue()
     ins.enqueue("A")
-    print("i should be 'a'", ins.dequeue())
+
     ins.enqueue("B")
 
     ins.enqueue("C")
@@ -87,8 +120,18 @@ if __name__ == "__main__":
 
     # # ins.dequeue()
     # ins.sizes()
+    print("i should be 'a'", ins.dequeue())
+    ins.enqueue("D")
+    ins.enqueue("E")
+
     print("i shoudl be 'b'", ins.dequeue())
     print("i shoudl be 'c'", ins.dequeue())
+    print("i shoudl be 'd'", ins.dequeue())
+    print("i shoudl be 'e'", ins.dequeue())
+    # print("i shoudl be 'e'", ins.dequeue())
+
+    # print("i shoudl be 'c'", ins.dequeue())
+    # print("i shoudl be 'c'", ins.dequeue())
     # print(ins.dequeue())
     # print(ins.dequeue())
     # print(ins.dequeue())
