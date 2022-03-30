@@ -20,7 +20,8 @@ class Pseudo_queue:
     def dequeue(self):
 
         """Fifo"""
-        y = self.size
+
+        # y = self.size
         # while self.size > 0:
         #     self.go_in.pop()
         #     self.size -= 1
@@ -30,8 +31,9 @@ class Pseudo_queue:
 
         # while y > 0:
 
-        #     if not self.go_out_from.is_empty():
+        #     if self.go_in.is_empty():
         #         self.go_in.push(self.go_out_from.top.value)
+        #         self.go_out_from.top = self.go_out_from.top.next
 
         #         # self.go_out_from.push(self.go_out_from.pop())
         #         # self.go_out_from.top = self.go_out_from.top.next
