@@ -1,5 +1,7 @@
 {
 	"prettier.printWidth": 140,
 	"python.formatting.provider": "black",
-	"prettier.useTabs": true
+	"prettier.useTabs": true,
+	"editor.suggest.snippetsPreventQuickSuggestions": false,
+	"aiXcoder.showTrayIcon": true
 }
