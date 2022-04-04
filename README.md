@@ -14,3 +14,4 @@
 | stacks-and-queues          |            [stacks-and-queues](./stacks-and-queues/README_Stack_Ques.md)            |
 | stack-queue-pseudo         |       [stack-queue-pseudo](./stack-queue-pseudo/stack-queue-pseudo_README.md)       |
 | stack-queue-animal-shelter | [stack-queue-animal-shelter](./stack-queue-animal-shelter/Animal_Shelter_README.md) |
+| stack-queue-brackets       |     [stack-queue-brackets](./stack-queue-brackets/Validate_Brackets_README.md)      |
