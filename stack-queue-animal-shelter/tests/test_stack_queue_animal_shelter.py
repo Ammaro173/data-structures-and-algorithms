@@ -59,7 +59,7 @@ def test_dequeue_cat_from_shelter_of_many():
     new_shelter.enqueue("cat")
     new_shelter.enqueue("Cat")
     new_shelter.enqueue("Dog")
-    assert new_shelter.dequeue("cat").name == "Meaowwww"
+    assert new_shelter.dequeue("cat") == "Meaowwww"
 
 
 def test_dequeue_from_empty_shelter():
@@ -75,5 +75,5 @@ def test_dequeue_first_from_shelter_no_preference():
     new_shelter.enqueue("cat")
     new_shelter.enqueue("cat")
     new_shelter.enqueue("dog")
-    assert new_shelter.dequeue().name == "WOOOFFF"
+    assert new_shelter.dequeue() == "WOOOFFF"
     assert new_shelter.front.name == "Meaowwww"
