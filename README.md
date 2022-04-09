@@ -15,3 +15,4 @@
 | stack-queue-pseudo         |       [stack-queue-pseudo](./stack-queue-pseudo/stack-queue-pseudo_README.md)       |
 | stack-queue-animal-shelter | [stack-queue-animal-shelter](./stack-queue-animal-shelter/Animal_Shelter_README.md) |
 | stack-queue-brackets       |     [stack-queue-brackets](./stack-queue-brackets/Validate_Brackets_README.md)      |
+| Trees                      |                           [Trees](./trees/tree_README.md)                           |
