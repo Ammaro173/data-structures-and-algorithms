@@ -98,6 +98,18 @@ class BinaryTree:
         except AttributeError:
             return "A root element parameter is required. Please invoke the in_order method with a root node as an arguement."
 
+    def get_max_BT(self):
+        """
+        Returns the max value in the tree.
+        """
+        try:
+            if self.root:
+                return self.in_order(self.root)[-1]
+            else:
+                return "A root element parameter is required. Please invoke the get_max_BT method with a root node as an arguement."
+        except AttributeError:
+            return "A root element parameter is required. Please invoke the get_max_BT method with a root node as an arguement."
+
 
 class BinarySearchTree(BinaryTree):
     def add(self, value):
@@ -159,6 +171,19 @@ class BinarySearchTree(BinaryTree):
         else:
             return False
 
+    ## traverse the max of tree
+    def get_max_BST(self):
+        """
+        Method that returns the max value in the tree
+        """
+        if self.root.value != None:
+            current = self.root
+            while current.right:
+                current = current.right
+            return current.value
+        else:
+            return "Please enter a valid integer for the BinarySearchTree."
+
 
 if __name__ == "__main__":
     new_tree = BinarySearchTree()
@@ -175,6 +200,9 @@ if __name__ == "__main__":
     new_tree.add(13)
     new_tree.add(2)
     new_tree.add(90)
+    print("im the max of BST ! ", new_tree.get_max_BST())
+    print("im the max of BT ! ", new_tree.get_max_BT())
     print(new_tree.contains(90))
     print(new_tree.contains(13))
     print(new_tree.pre_order(new_tree.root))
+    print(new_tree.post_order(new_tree.root))

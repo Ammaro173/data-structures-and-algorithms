@@ -131,3 +131,15 @@ def test_contains_tree_of_ten(binary_search_tree_ten):
     assert binary_search_tree_ten.contains(100) == expected
     assert binary_search_tree_ten.contains(20) == expected
     assert binary_search_tree_ten.contains(60) == False
+
+
+# Can sucessfully search for the max in BinarySearchTree
+def test_max_search_tree_BST(binary_search_tree_ten):
+    expected = 100
+    assert binary_search_tree_ten.get_max_BST() == expected
+
+
+# Can sucessfully search for the max in BinaryTree
+def test_max_search_tree_BT(binary_search_tree_ten):
+    expected = 100
+    assert binary_search_tree_ten.get_max_BST() == expected
