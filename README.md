@@ -18,3 +18,4 @@
 | Trees                      |                           [Trees](./trees/tree_README.md)                           |
 | Trees-Max                  |                          [Trees-Max](./trees/Tree_max.md)                           |
 | tree-breadth-first         |       [tree-breadth-first](./tree-breadth-first/tree-breadth-first_README.md)       |
+| fizz-buzz-tree             |             [fizz-buzz-tree](./fizz-buzz-tree/fizz-buzz-tree-README.md)             |

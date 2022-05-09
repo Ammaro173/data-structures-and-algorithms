@@ -19,6 +19,7 @@ def breadth_first(root=None):
         node_list = []
         while queue:
             current_node = queue.pop(0)
+            # print("herere", current_node.value)
             node_list.append(current_node.value)
             if current_node.left:
                 queue.append(current_node.left)
