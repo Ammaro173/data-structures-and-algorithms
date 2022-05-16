@@ -52,6 +52,9 @@ class KTreeNode:
         except AttributeError:
             return "Wrong Entry please enter a root"
 
+    def __str__(self):
+        return self.value
+
 
 def build_tree():
 
@@ -73,6 +76,7 @@ def build_tree():
     sec_lvl_3.add_child(KTreeNode(13))
     sec_lvl_3.add_child(KTreeNode(14))
     sec_lvl_3.add_child(KTreeNode(15))
+
     root.add_child(sec_lvl_1)
     root.add_child(sec_lvl_2)
     root.add_child(sec_lvl_3)
@@ -83,23 +87,50 @@ def build_tree():
 def fizz_buzz_tree(root):
 
     try:
-        spaces = " " * root.get_lvl() * 4
-        prefix = spaces + "|--" if root.parent else ""
-        if root.value % 3 == 0 and root.value % 5 == 0:
-            root.value = "FizzBuzz"
-        elif root.value % 3 == 0:
-            root.value = "Fizz"
-        elif root.value % 5 == 0:
-            root.value = "Buzz"
-        else:
-            root.value = str(root.value)
-        print(prefix + str(root.value))
-        if root.children:
+
+        # clone the tree
+
+        def clone_tree(root):
+            new_root = KTreeNode(root.value)
             for child in root.children:
+                new_root.add_child(clone_tree(child))
+            return new_root
+
+        new_tree = clone_tree(root)
+        spaces = " " * new_tree.get_lvl() * 4
+        prefix = spaces + "|--" if new_tree.parent else ""
+
+        if new_tree.value % 3 == 0 and new_tree.value % 5 == 0:
+            new_tree.value = "FizzBuzz"
+        elif new_tree.value % 3 == 0:
+            new_tree.value = "Fizz"
+        elif new_tree.value % 5 == 0:
+            new_tree.value = "Buzz"
+        else:
+            new_tree.value = str(new_tree.value)
+
+        print(prefix + str(new_tree.value))
+        if new_tree.children:
+            for child in new_tree.children:
                 fizz_buzz_tree(child)
+
+        return new_tree
 
     except AttributeError:
         return "Wrong Entry please enter a root"
+
+        # def cloneTree(root):
+        #     # base case
+        #     if root is None:
+        #         return None
+        #     # create a new node with the same data as the root node
+        #     root_copy = KTreeNode(root.data)
+        #     root_copy.children = [cloneTree(child) for child in root.children]
+
+        #     # return cloned root node
+        #     return root_copy
+
+        # new_root = cloneTree(root)
 
 
 if __name__ == "__main__":
@@ -108,6 +139,10 @@ if __name__ == "__main__":
     # root.add_child(KTreeNode(16))
     root.prnt_tree()
 
-    root.prnt_fizz_buzz_tree()
+    # root.prnt_fizz_buzz_tree()
 
-    fizz_buzz_tree(root2)
+    new_tree = fizz_buzz_tree(root)
+    new_tree2 = fizz_buzz_tree(root)
+    # fizz_buzz_tree(root)
+
+    # fizz_buzz_tree(root)

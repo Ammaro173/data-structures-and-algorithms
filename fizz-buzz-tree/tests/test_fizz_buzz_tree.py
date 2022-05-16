@@ -23,19 +23,21 @@ def test_build_tree():
 
 def test_fizz_buzz_tree():
     tree = build_tree()
-    fizz_buzz_tree(tree)
-    assert tree.value == "1"
-    assert tree.children[0].value == "2"
-    assert tree.children[1].value == "Fizz"
-    assert tree.children[2].value == "4"
-    assert tree.children[0].children[0].value == "Buzz"
-    assert tree.children[0].children[1].value == "Fizz"
-    assert tree.children[0].children[2].value == "7"
-    assert tree.children[1].children[0].value == "8"
-    assert tree.children[1].children[1].value == "Fizz"
-    assert tree.children[1].children[2].value == "Buzz"
-    assert tree.children[2].children[0].value == "11"
-    assert tree.children[2].children[1].value == "Fizz"
-    assert tree.children[2].children[2].value == "13"
-    assert tree.children[2].children[3].value == "14"
-    assert tree.children[2].children[4].value == "FizzBuzz"
+    new_tree = fizz_buzz_tree(tree)
+    print("-->", new_tree.children[0].value)
+    print("typooo?", type(new_tree.children[0].value))
+    assert new_tree.value == "1"
+    assert new_tree.children[0].value == "2"
+    assert new_tree.children[1].value == "Fizz"
+    assert new_tree.children[2].value == "4"
+    assert new_tree.children[0].children[0].value == "Buzz"
+    assert new_tree.children[0].children[1].value == "Fizz"
+    assert new_tree.children[0].children[2].value == "7"
+    assert new_tree.children[1].children[0].value == "8"
+    assert new_tree.children[1].children[1].value == "Fizz"
+    assert new_tree.children[1].children[2].value == "Buzz"
+    assert new_tree.children[2].children[0].value == "11"
+    assert new_tree.children[2].children[1].value == "Fizz"
+    assert new_tree.children[2].children[2].value == "13"
+    assert new_tree.children[2].children[3].value == "14"
+    assert new_tree.children[2].children[4].value == "FizzBuzz"
