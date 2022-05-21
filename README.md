@@ -20,3 +20,5 @@
 | tree-breadth-first         |       [tree-breadth-first](./tree-breadth-first/tree-breadth-first_README.md)       |
 | fizz-buzz-tree             |             [fizz-buzz-tree](./fizz-buzz-tree/fizz-buzz-tree-README.md)             |
 | insert-sort-algo           |                   [insert-sort-algo](./insertion-sort/README.md)                    |
+| merge-sort                 |                        [merge-sort](./merge-sort/README.md)                         |
+| Hash-Tables                |                       [Hash-Tables](./hash-tables/README.md)                        |
