@@ -1,6 +1,10 @@
 # Data-Structures-and-Algorithms - Challenge Ten
 
-## Step-by-Step: Insertion Sort
+## Whiteboard process
+
+![Whiteboard](./insert-sort.jpg)
+
+## Step-by-Step: Insertion Sort && Approach & Efficiency
 
 Say that you are given a list of integers in no perticular order and you would like them to be sorted. Without using any built-in functions, how would you do it?
 
