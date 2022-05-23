@@ -5,7 +5,7 @@ class Node:
 
     def __init__(self, data=None, nextNode=None):
         self.data = data
-        self.nextNodes = nextNode
+        self.nextNode = nextNode
 
 
 class LinkedList:
