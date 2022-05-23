@@ -2,6 +2,7 @@ class HashTable:
     def __init__(self, length=1024):
         self._length_of_hash_table = length
         self._hash_table = [None] * self._length_of_hash_table
+        # or [None for i in range(self._length_of_hash_table)] or for collision handling [[] for i in range(self._length_of_hash_table)]
 
     def add(self, key, value):
         """

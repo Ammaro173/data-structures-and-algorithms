@@ -94,8 +94,10 @@ class LinkedList:
             leader.nextNode = follower  #  list1 go point at list 2 next head !
 
             leader = leader_next  # now list1 jump to the next Node
-            follower = follower_next  # now list2 jump to the next Node
-            list2.head = follower  # list2  make the the head the next node
+            follower = follower.nextNode  # now list2 jump to the next Node
+            list2.head = (
+                follower_next  # follower # list2  make the the head the next node
+            )
             # \\ Notice only list2 is actually added to list1 not the opposite so we can keep the space_comp (1)
 
 

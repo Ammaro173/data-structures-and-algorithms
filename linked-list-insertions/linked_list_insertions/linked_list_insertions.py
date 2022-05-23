@@ -89,7 +89,7 @@ class LinkedList:
 
     def insert_after(self, value, newValue):
         """
-        insert a value(newValue) , before a specific (value)
+        insert a value(newValue) , after a specific (value)
         """
         if not self.head:
             return

@@ -12,8 +12,9 @@ def test_zip_list_megrge():
     ll2.append("A")
     ll2.append("B")
     ll2.append("C")
-    y = ll1.zipLists(ll1, ll2)
-    actual = repr(y)
+    actual = ll1.zipLists(ll1, ll2)
+
+    expected = ll1.stringfy()
     # actual = (
     #     "{"
     #     + str(ll1.head.data)
@@ -41,7 +42,7 @@ def test_zip_list_megrge():
     #     + "-->NULL"
     # )
 
-    expected = "{111}-->{A}-->{222}-->{B}-->{333}-->{C}-->NULL"
+    # expected = "{111}-->{A}-->{222}-->{B}-->{333}-->{C}-->NULL"
     # "{111}-->{A}-->{222}-->{B}-->{333}-->{C}-->Null"
     assert actual == expected
 

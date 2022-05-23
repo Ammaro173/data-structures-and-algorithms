@@ -110,6 +110,18 @@ class BinaryTree:
         except AttributeError:
             return "A root element parameter is required. Please invoke the get_max_BT method with a root node as an arguement."
 
+    def in_order_traversal(self):
+        elements = []
+        if self.left:
+            elements += self.left.in_order_traversal()
+
+        elements.append(self.data)
+
+        if self.right:
+            elements += self.in_order_traversal()
+
+        return elements
+
 
 class BinarySearchTree(BinaryTree):
     def add(self, value):
@@ -148,26 +160,26 @@ class BinarySearchTree(BinaryTree):
         """
         if self.root.value != None:
             current = self.root
-            if current.value == value:
-                return True
-            else:
-                while current:
-                    if current.value == value:
-                        return True
-                    elif value < current.value:
-                        if current.left:
-                            current = current.left
-                            if current.value == value:
-                                return True
-                        else:
-                            return False
-                    elif value > current.value:
-                        if current.right:
-                            current = current.right
-                            if current.value == value:
-                                return True
-                        else:
-                            return False
+            # if current.value == value:
+            #     return True
+            # else:
+            while current:
+                if current.value == value:
+                    return True
+                elif value < current.value:
+                    if current.left:
+                        current = current.left
+                        if current.value == value:
+                            return True
+                    else:
+                        return False
+                elif value > current.value:
+                    if current.right:
+                        current = current.right
+                        if current.value == value:
+                            return True
+                    else:
+                        return False
         else:
             return False
 
@@ -184,9 +196,26 @@ class BinarySearchTree(BinaryTree):
         else:
             return "Please enter a valid integer for the BinarySearchTree."
 
+    def in_order_traversal(self):
+
+        elements = []
+        current = self.root
+        if current.left:
+            self = current.left
+            elements += self.in_order_traversal()
+
+        elements.append(current.data)
+
+        if current.right:
+            self = current.right
+            elements += self.in_order_traversal()
+
+        return elements
+
 
 if __name__ == "__main__":
     new_tree = BinarySearchTree()
+    # new_tree1 = BinarySearchTree(0)
     # new_tree.root = Node(10)
     # new_tree.add(10)
     # print(new_tree.root.value)
@@ -206,3 +235,6 @@ if __name__ == "__main__":
     print(new_tree.contains(13))
     print(new_tree.pre_order(new_tree.root))
     print(new_tree.post_order(new_tree.root))
+    print(new_tree.in_order(new_tree.root))
+
+    # print(new_tree.in_order_traversal())
