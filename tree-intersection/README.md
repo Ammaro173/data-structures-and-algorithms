@@ -21,7 +21,36 @@ and written Tests.
   > Space Complexity: O(n) worst case
 ```
 
-## API
+## Solution
+
+```python
+def tree_intersection(tree_1, tree_2):
+
+    lst = []
+    ht = HashTable()
+
+    def recurse_traverse(node, second_tree):
+
+        if not node:
+            return
+
+        recurse_traverse(node.left, second_tree)
+        recurse_traverse(node.right, second_tree)
+
+        if second_tree:
+
+            if ht.contains(node.value):
+                lst.append(node.value)
+
+        else:
+
+            ht.add(node.value)
+
+    recurse_traverse(tree_1.root, False)
+    recurse_traverse(tree_2.root, True)
+
+    return lst
+```
 
 ## pull requests
 
