@@ -55,3 +55,4 @@ def tree_intersection(tree_1, tree_2):
 ## pull requests
 
 [pr `27` - trees-intersection](https://github.com/Ammaro173/data-structures-and-algorithms/pull/27)
+[pr `28` - trees-intersection](https://github.com/Ammaro173/data-structures-and-algorithms/pull/28)
