@@ -25,3 +25,4 @@
 | hashmap-repeated-word      |             [hashmap-repeated-word](./hashmap-repeated-word/README.md)              |
 | trees-intersection         |                 [trees-intersection](./tree-intersection/README.md)                 |
 | Quick-sort                 |                        [Quick-sort](./quick-sort/README.md)                         |
+| left-join                  |                         [left-join](./left-join/README.md)                          |
